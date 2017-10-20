@@ -1,0 +1,30 @@
+<div class="row">
+  <div class = "col-md-1">
+  </div>
+
+  <div class = "col-md-6">
+    <h1>*ngIf</h1>
+    <button type="button" class="btn btn-outline-primary btn-block" (click)="mostrar =!mostrar">
+    Mostrar/Ocultar</button>
+    <br>
+    <div *ngIf=mostrar class="card bg-primary text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p>{{frase.mensaje}}</p>
+      <footer class="blockquote-footer">
+        <small>
+          {{frase.autor}} <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  </div>
+
+  <div class = "col-md-4">
+    <h1>*ngFor</h1>
+    <!-- List group -->
+    <div class="list-group" id="myList" role="tablist">
+      <a *ngFor="let persona of personajes; let i= index"class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">{{i+1}}. {{persona}}</a>
+
+    </div>
+  </div>
+</div>
